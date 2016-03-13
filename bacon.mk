@@ -194,6 +194,7 @@ PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
     NfcNci \
     Tag \
     nfc_nci.bacon \
