@@ -262,6 +262,9 @@ PRODUCT_PACKAGES += \
     libdsutils \
     libwpa_qmi_eap_proxy
 
+PRODUCT_PACKAGES += \
+    AOSPLinks
+
 # Recovery
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(LOCAL_PATH)/bacon
@@ -336,6 +339,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.telephony.call_ring.multiple=0 \
     ro.telephony.default_network=9
+
+# Mobile Data provision prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.android.prov_mobiledata=false
+
+# facelock properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.facelock.black_timeout=700 \
+    ro.facelock.det_timeout=2500 \
+    ro.facelock.rec_timeout=3500 \
+    ro.facelock.est_max_time=600
 
 # Call the proprietary setup
 $(call inherit-product-if-exists, vendor/oneplus/bacon/bacon-vendor.mk)
