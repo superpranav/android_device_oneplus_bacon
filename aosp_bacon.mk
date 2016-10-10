@@ -27,14 +27,8 @@ $(call inherit-product, device/oneplus/bacon/bacon.mk)
 # Inherit some common CM stuff.
 #$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_bacon
-PRODUCT_DEVICE := bacon
-PRODUCT_MANUFACTURER := OnePlus
-PRODUCT_MODEL := A0001
-
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
-PRODUCT_BRAND := oneplus
 TARGET_VENDOR := oneplus
 TARGET_VENDOR_PRODUCT_NAME := bacon
 TARGET_VENDOR_DEVICE_NAME := A0001
