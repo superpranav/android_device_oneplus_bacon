@@ -28,9 +28,7 @@ $(call inherit-product, device/oneplus/bacon/bacon.mk)
 #$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    Camera2 \
-    Messaging
+    Camera2
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
