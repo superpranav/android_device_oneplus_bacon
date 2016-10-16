@@ -97,7 +97,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.bacon \
-    Camera2
+    SnapdragonCamera
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.codecremote=false
