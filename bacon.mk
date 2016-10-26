@@ -97,7 +97,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.bacon \
-    Snap
+    Camera2 \
+    Messaging
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.codecremote=false
