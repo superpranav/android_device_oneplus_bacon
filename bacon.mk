@@ -94,11 +94,12 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     libboringssl-compat
 
-# Camera
+# stuff
 PRODUCT_PACKAGES += \
     camera.bacon \
     Camera2 \
-    messaging
+    messaging \
+    DeskClock
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.codecremote=false
