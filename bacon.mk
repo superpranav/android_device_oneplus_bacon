@@ -98,7 +98,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.bacon \
     Camera2 \
-    Messaging
+    messaging
 
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.codecremote=false
