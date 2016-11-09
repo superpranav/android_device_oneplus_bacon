@@ -72,8 +72,10 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_USE_SMD_TTY := true
 
 # Camera
+BOARD_GLOBAL_CFLAGS += -DMETADATA_CAMERA_SOURCE
+TARGET_USE_COMPAT_GRALLOC_ALIGN := true
 USE_DEVICE_SPECIFIC_CAMERA := true
-#COMMON_GLOBAL_CFLAGS += -DOPPO_CAMERA_HARDWARE
+BOARD_GLOBAL_CFLAGS += -DOPPO_CAMERA_HARDWARE -DCAMERA_VENDOR_L_COMPAT
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
@@ -85,13 +87,9 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 # TARGET_TRANSPARENT_COMPRESSION_METHOD := lz4
 
 # Enable dexpreopt to speed boot time
-ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
-    ifeq ($(WITH_DEXPREOPT_BOOT_IMG_ONLY),)
-      WITH_DEXPREOPT_BOOT_IMG_ONLY := true
-    endif
-  endif
-endif
+
+      WITH_DEXPREOPT := true
+   
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
